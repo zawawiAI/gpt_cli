@@ -10,7 +10,7 @@ Set up an API key for the OpenAI API by signing up for an account on the OpenAI 
 
 Replace "Your OpenAI API Key" in the code with your own API key.
 
-Run the code with python openai_search.py and start searching.
+Run the code with python chatgpt_linuxterminal.py and start searching.
 
 Usage
 The tool will prompt you to enter a search query. Once you enter your query, it will generate a response using the text-davinci-003 model. You can search for any topic you want, and the model will generate a relevant response.
