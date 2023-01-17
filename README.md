@@ -1,7 +1,7 @@
-# chatgpt_linuxterminal
+# chatgpt_cli
 This scripts allows you to use OpenAI in your Linux terminal 
 
-This is a command line tool that allows you to search using the OpenAI API your Linux terminal or Windows Command Prompt (I have not personally tested). It uses the openai library to interact with the API and the text-davinci-003 model to generate responses to your queries.
+This is a command line tool that allows you to search using the OpenAI API your CLIs such as Linux terminal or Windows Command Prompt (I have not personally tested). It uses the openai library to interact with the API and the text-davinci-003 model to generate responses to your queries.
 
 Getting Started
 
