@@ -1,17 +1,17 @@
 # chatgpt_cli
-This scripts allows you to use OpenAI in your Linux terminal 
+This scripts allows you to use OpenAI in both your Linux and Windows terminals. 
 
-This is a command line tool that allows you to search using the OpenAI API your CLIs such as Linux terminal or Windows Command Prompt (I have not personally tested). It uses the openai library to interact with the API and the text-davinci-003 model to generate responses to your queries.
+This is a command line tool that allows you to search using the OpenAI API your CLIs such as Linux terminal or Windows Command Prompt. It uses the openai library to interact with the API and the text-davinci-003 model to generate responses to your queries.
 
 Getting Started
 
-Install the openai library by running pip install openai in your command line.
+Install the openai library by running `pip install openai` in your command line.
 
 Set up an API key for the OpenAI API by signing up for an account on the OpenAI website and obtaining a key.
 
 Replace "Your OpenAI API Key" in the code with your own API key.
 
-Run the code with python chatgpt_linuxterminal.py and start searching.
+Run the code with `python chatgpt_linuxterminal.py` (Linux) or `python chatgpt_cli` (Windows) and start searching.
 
 Usage
 
