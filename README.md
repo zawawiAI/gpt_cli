@@ -17,7 +17,7 @@ Usage
 
 The tool will prompt you to enter a search query. Once you enter your query, it will generate a response using the text-davinci-003 model. You can search for any topic you want, and the model will generate a relevant response.
 
-Added 3 new features
+In chatgpt_cli_v2.py I have added 3 new features
 
 1)To save the previous response to a text file, input "save" and enter a file name when prompted.
 2)To exit the script, input "exit".
