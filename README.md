@@ -17,6 +17,20 @@ Usage
 
 The tool will prompt you to enter a search query. Once you enter your query, it will generate a response using the text-davinci-003 model. You can search for any topic you want, and the model will generate a relevant response.
 
+Added 3 new features
+
+1)To save the previous response to a text file, input "save" and enter a file name when prompted.
+2)To exit the script, input "exit".
+
+3)Error Handling
+The script includes error handling for the following exceptions:
+
+openai.exceptions.OpenAiError
+IndexError: when no response is generated
+Exception: for any other errors that may occur.
+Please reach out to OpenAI if you are facing any issues with the API.
+
+
 You can change the model_engine to any other OpenAI's models. Also, you can play with the max_tokens, n, stop, and temperature parameters to customize the output of the model.
 
 Tips
