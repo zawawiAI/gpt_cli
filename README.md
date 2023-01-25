@@ -11,13 +11,13 @@ Set up an API key for the OpenAI API by signing up for an account on the OpenAI 
 
 Replace "Your OpenAI API Key" in the code with your own API key.
 
-Run the code with `python chatgpt_linuxterminal.py` (Linux) or `python chatgpt_cli` (Windows) and start searching.
+Run the code with `python chatgpt_cli` (Linux and Windows) and start searching.
 
 Usage
 
 The tool will prompt you to enter a search query. Once you enter your query, it will generate a response using the text-davinci-003 model. You can search for any topic you want, and the model will generate a relevant response.
 
-In chatgpt_cli_v2.py I have added 3 new features
+In chatgpt_cli.py I have added 3 new features
 
 1)To save the previous response to a text file, input "save" and enter a file name when prompted.
 2)To exit the script, input "exit".
