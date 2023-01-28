@@ -1,4 +1,10 @@
 # gpt_cli
+
+Notes: This is NOT ChatGPT since the ChatGPT API has not been released yet, but you can use OpenAI API with GPT-3 capability (https://beta.openai.com/docs/introduction).
+
+However once ChatGPT API is made available to the public, I personally think you can just change the API Key with very little modification to the code or it requires no modification at all.
+
+
 This scripts allows you to use OpenAI API in both your Linux and Windows terminals. 
 
 This is a command line tool that allows you to search using the OpenAI API your CLIs such as Linux terminal or Windows Command Prompt. It uses the openai library to interact with the API and the text-davinci-003 model to generate responses to your queries.
