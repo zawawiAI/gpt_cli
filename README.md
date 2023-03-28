@@ -1,5 +1,16 @@
 # gpt_cli
 
+This version is updated by Rowan Kelleher
+
+Updated features:
+1. Prompt to ask you what model you want to use
+   1. Use "3.5" or "4" shortcuts to use "gpt-3.5-turbo" and "gpt-4"
+   2. Or just type in the applicable name
+2. Prompt asking you if you want to save your responses
+   1. If you say "yes" then the program will log your model, prompt, and response in a different file for each day
+
+
+
 Notes: This is NOT ChatGPT since the ChatGPT API has not been released yet, but you can use OpenAI API with GPT-3 capability (https://beta.openai.com/docs/introduction).
 
 However once ChatGPT API is made available to the public, I personally think you can just change the API Key with very little modification to the code or it requires no modification at all.
