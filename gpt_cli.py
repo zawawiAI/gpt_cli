@@ -1,38 +1,48 @@
 import openai
+import os.path
+from datetime import date
 
+#put your api token here and don't push with it in lol
+API_KEY = ""
+today = date.today()
+file_name = today.strftime("%b-%d-%Y") + ".txt"
+
+#rename the path here to your path
+path = "/path/to/logs/" + file_name
 class OpenAIAPI:
     def __init__(self, api_key, model_engine):
         openai.api_key = api_key
         self.model_engine = model_engine
         self.response = ""
+        self.prompt = ""
         
     def generate_response(self, prompt):
         """
         Generates a response for the given prompt
         """
-        completion = openai.Completion.create(
-            engine=self.model_engine,
-            prompt=prompt,
-            max_tokens=1024,
-            n=1,
-            temperature=0.5,
-            top_p=1,
-            frequency_penalty=0.2,
-            presence_penalty=0.2,
-            stop=["100."]
-        )
-        self.response = completion.choices[0].text
+        self.prompt = prompt
+        completion = openai.ChatCompletion.create(model=self.model_engine, messages=[{"role": "user", "content": prompt}])
+        self.response = completion.choices[0].message.content
         return self.response
 
     def save_response(self, file_name):
         """
         Saves the current response to a file
         """
-        if self.response == "":
-            print("No previous response to save.")
+        if(os.path.isfile(file_name)):
+            with open(file_name, "a") as f:
+                f.write("\n\n")
+                f.write("###############\n\n")
+                f.write(f"Model: {self.model_engine}\n\n")
+                f.write(f"Prompt: {prompt}\n\n")
+                f.write(f"Response:\n {self.response}")
+                f.close()
+            print(f"Response saved to {file_name}")
         else:
-            with open(file_name, "w") as f:
-                f.write(self.response)
+            with open(file_name, "x") as f:
+                f.write(f"Model: {self.model_engine}\n\n")
+                f.write(f"prompt: {prompt}\n\n")
+                f.write(f"response: {self.response}")
                 f.close()
             print(f"Response saved to {file_name}")
             
@@ -48,18 +58,24 @@ class OpenAIAPI:
             print(f"Error: {e}")
             
 if __name__ == "__main__":
-    api = OpenAIAPI("Your OpenAI API Key", "text-davinci-003")
+    model_name = input("Model: ")
+    if(model_name == "3.5"):
+        model_name = "gpt-3.5-turbo"
+    elif(model_name == "4"):
+        model_name = "gpt-4"
+    save_option = input("Do you want to save your work? ")
+    api = OpenAIAPI(API_KEY, model_name)
     while True:
         prompt = input("Search: ")
         if prompt.strip().lower() == "exit":
             break
         try:
-            if prompt.strip().lower() != "save":
-                response = api.generate_response(prompt)
-                print(response)
-            else:
-                file_name = input("Enter a file name: ")
-                api.save_response(file_name)
+            response = api.generate_response(prompt)
+            print("\n")
+            print(response)
+            print("\n\n")
+            if(save_option.strip().lower() == "yes"):    
+                api.save_response(path)
         except Exception as e:
             api.handle_exception(e)
 
