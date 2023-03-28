@@ -2,10 +2,13 @@ import openai
 import os.path
 from datetime import date
 
+#put your api token here and don't push with it in lol
 API_KEY = ""
 today = date.today()
 file_name = today.strftime("%b-%d-%Y") + ".txt"
-path = "/home/rowan/gpt_cli/logs/" + file_name
+
+#rename the path here to your path
+path = "/path/to/logs/" + file_name
 class OpenAIAPI:
     def __init__(self, api_key, model_engine):
         openai.api_key = api_key
