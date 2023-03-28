@@ -2,6 +2,7 @@ import openai
 import os.path
 from datetime import date
 
+API_KEY = ""
 today = date.today()
 file_name = today.strftime("%b-%d-%Y") + ".txt"
 path = "/home/rowan/gpt_cli/logs/" + file_name
@@ -60,7 +61,7 @@ if __name__ == "__main__":
     elif(model_name == "4"):
         model_name = "gpt-4"
     save_option = input("Do you want to save your work? ")
-    api = OpenAIAPI("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", model_name)
+    api = OpenAIAPI(API_KEY, model_name)
     while True:
         prompt = input("Search: ")
         if prompt.strip().lower() == "exit":
