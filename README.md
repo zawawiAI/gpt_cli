@@ -10,6 +10,10 @@ Updated features:
    1. If you say "yes" then the program will log your model, prompt, and response in a different file for each day
 
 
+https://github.com/zawawiAI/gpt_cli/assets/50743060/9dbbeeec-f2aa-43cc-bd05-80a2dfebba32
+
+
+
 
 Notes: This is NOT ChatGPT since the ChatGPT API has not been released yet, but you can use OpenAI API with GPT-3 capability (https://beta.openai.com/docs/introduction).
 
